@@ -2,38 +2,38 @@ import React from 'react'
 import Title from '../components/Title'
 import '../App.css'
 import Input from '../components/Input'
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import {Container} from 'react-bootstrap'
 
 export default function Login() {
-
-    const customStyle = {
-        fontSize: '20px',
-        background: 'black',
-        color: 'white',
-        margin: '2rem',
-        padding: '4rem'
-    }
-
     return (
         <div>
-            <Title classes={"title"} text={"Login Page"} />
-            <hr />
-            <div style={customStyle}>
-                <label 
-                    style={{fontSize: '20px'}}
-                >
-                <Title classes={"label-text"} text={"Username:"} />
-                </label>
+            <Header />
+            <main>
+                <Container>
+                    <Title classes={"title"} text={"Login Page"} />
+                    <hr />
+                    <div>
+                        <label 
+                            style={{fontSize: '20px'}}
+                        >
+                        <Title classes={"label-text"} text={"Username:"} />
+                        </label>
 
-                <Input 
-                    type={"text"} 
-                    placeholder={"Enter Username"}
-                />
+                        <Input 
+                            type={"text"} 
+                            placeholder={"Enter Username"}
+                        />
 
-                <Input
-                    type={"date"}
-                    placeholder={""}
-                />
-            </div>
+                        <Input
+                            type={"date"}
+                            placeholder={""}
+                        />
+                </div>
+                </Container>
+            </main>
+            <Footer /> 
         </div>
     )
 }

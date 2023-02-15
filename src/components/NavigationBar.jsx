@@ -3,12 +3,19 @@ import {Container, Nav, Navbar} from 'react-bootstrap'
 
 export default function NavigationBar() {
     return (
-        <nav>
-            <Nav className='bg-dark'>
+        <div className='custom-nav'>
+            <Navbar className='bg-dark' expand="lg">
                 <Container>
                     <Navbar.Brand>My Electronics</Navbar.Brand>
+                    <Nav>
+                        <Nav.Link href='/'>Home</Nav.Link>
+                        <Nav.Link>About</Nav.Link>
+                        <Nav.Link>Contact</Nav.Link>
+                        <Nav.Link href='/login'>Login</Nav.Link>
+                        <Nav.Link>Products</Nav.Link>
+                    </Nav>
                 </Container>
-            </Nav>
-        </nav>
+            </Navbar>
+        </div>
     )
 }

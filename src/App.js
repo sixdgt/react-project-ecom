@@ -1,18 +1,15 @@
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import {Container} from 'react-bootstrap';
+import {Routes, Route} from 'react-router-dom'
+import Login from './pages/Login';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <main>
-        <Container>
-          <h1>This is our home page</h1>
-        </Container>
-      </main>
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
     </div>
   );
 }
