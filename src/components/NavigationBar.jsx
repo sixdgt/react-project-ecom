@@ -10,7 +10,7 @@ export default function NavigationBar() {
                     <Nav>
                         <Nav.Link href='/'>Home</Nav.Link>
                         <Nav.Link>About</Nav.Link>
-                        <Nav.Link>Contact</Nav.Link>
+                        <Nav.Link href='/cart'>Cart</Nav.Link>
                         <Nav.Link href='/login'>Login</Nav.Link>
                         <Nav.Link>Products</Nav.Link>
                     </Nav>
