@@ -1,0 +1,37 @@
+<div>
+                <label>
+                <Title classes={"label-text"} text={"Username:"} />
+                </label>
+                <Input 
+                    type={"text"} 
+                    placeholder={"Enter Username"}
+                />
+                <input className='btn btn-success' id='btnDemo' onClick={changeText} value={'Demo'} />
+                <br />
+                <span id="price">1500</span>
+                <input 
+                    className='btn btn-primary' 
+                    onClick={(e) =>{
+                        const name = "Mind Risers"
+                        alert(e.target.value + name)
+                        var num1 = 12;
+                        var num2 = 23;
+                        const sum = num1 + num2;
+                        console.log(sum)
+                        alert("Sum of two number: " + sum)
+                        const price = document.getElementById('price');
+                        const latest_price = parseInt(price.innerHTML) + 200
+                        alert("Latest Price: " + latest_price)
+                        const demo = document.getElementById('btnDemo')
+                        demo.style.background = "red"
+
+                    }} 
+                    value={'Try'} />
+            </div>
+                const changeText = (e) => {
+        console.log("click")
+        console.log(e.target.value)
+        e.target.value = "Change"
+        alert(e.target.value)
+        
+    }

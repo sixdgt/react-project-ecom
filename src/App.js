@@ -13,7 +13,9 @@ function App() {
     <main>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/login' element={<Login 
+          text={'Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum has been the industry'}
+          maxLength={12} />} />
         <Route path='/cart' element={<Cart />} />
       </Routes>
     </main>
