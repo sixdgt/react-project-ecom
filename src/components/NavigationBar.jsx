@@ -12,6 +12,7 @@ export default function NavigationBar() {
                         <Nav.Link>About</Nav.Link>
                         <Nav.Link href='/cart'>Cart</Nav.Link>
                         <Nav.Link href='/login'>Login</Nav.Link>
+                        <Nav.Link href='/register'>Register</Nav.Link>
                         <Nav.Link>Products</Nav.Link>
                     </Nav>
                 </Container>

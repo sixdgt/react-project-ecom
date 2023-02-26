@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Input({type, 
-    placeholder, classes, data="", id, change}) {
+    placeholder, classes, data="", id, change, name}) {
     return (
         <input
             type={type} 
@@ -10,6 +10,7 @@ export default function Input({type,
             value={data}
             id={id}
             onChange={change}
+            name={name}
         />
     )
 }
