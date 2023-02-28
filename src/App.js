@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Registration from './pages/Registration';
+import ProductDesc from './pages/ProductDesc';
 import Header from './components/Header'
 import Footer from './components/Footer'
 
@@ -19,6 +20,7 @@ function App() {
           maxLength={12} />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/register' element={<Registration />} />
+        <Route path='/product' element={<ProductDesc />} />
       </Routes>
     </main>
     <Footer />
