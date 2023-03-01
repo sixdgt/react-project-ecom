@@ -7,6 +7,7 @@ import Registration from './pages/Registration';
 import ProductDesc from './pages/ProductDesc';
 import Header from './components/Header'
 import Footer from './components/Footer'
+import About from './pages/About';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/cart' element={<Cart />} />
         <Route path='/register' element={<Registration />} />
         <Route path='/product' element={<ProductDesc />} />
+        <Route path='/about' element={<About />} />
       </Routes>
     </main>
     <Footer />
