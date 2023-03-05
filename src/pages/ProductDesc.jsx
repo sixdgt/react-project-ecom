@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ProductDetail from '../components/ProductDetail'
 import Axios from 'axios'
-import {Container, Card, Row, Col} from 'react-bootstrap'
+import {Container,Card, Row, Col} from 'react-bootstrap'
 
 export default function ProductDesc() {
     const item = {
@@ -20,9 +20,9 @@ export default function ProductDesc() {
 
     const fetchProducts = async() => {
         const { data } = await Axios.get('https://dummyjson.com/products');
-        const products = data;
-        setProducts(products);
-        console.log(products);
+        const lists = data.products;
+        setProducts(lists);
+        console.log(lists);
     }
 
     useEffect(() => {
@@ -34,9 +34,20 @@ export default function ProductDesc() {
             <ProductDetail product={item} customer={customerDetail} />
             <Container>
                 <Row>
-                {/* {products.map((product) => {
-                    <h1>{product.title}</h1>
-                })} */}
+                {products.map((product) => (
+                    <Col md="3" className='mb-3'>
+                        <Card>
+                            <Card.Header><h5>{product.title}</h5></Card.Header>
+                            <Card.Body>
+                                <h6>{product.description}</h6>
+                            </Card.Body>
+                            <Card.Footer>
+                                <p>Price: {product.price}</p>
+                                <p>Brand: {product.brand}</p>
+                            </Card.Footer>
+                        </Card>
+                    </Col>
+                ))}
                 </Row>
             </Container>
         </div>
